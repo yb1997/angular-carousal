@@ -1,0 +1,19 @@
+.carousel-item-container {
+  display: block;
+  // border: 1px solid red;
+  margin: 1em;
+  // overflow: hidden;
+}
+
+.carousel-item-container.horiz {
+  /* display: inline-block; */
+  // float: left;
+  // border: 1px solid green;
+}
+
+.carousel-item-container.vert {
+  // border: 1px solid dodgerblue;
+  width: 90%;
+  margin: 1em auto; 
+}
+

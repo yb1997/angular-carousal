@@ -1,0 +1,17 @@
+<div #carouselContainer class="carousel-container">
+
+  <div 
+    #carouselCore
+    [ngClass]="direction" 
+    [ngStyle]="{ 'height': carouselHeight, 'width': carouselWidth }" 
+    class="carousel">
+
+    <div #carouselItemsContainer class="carousel-items-container">
+      <ng-content select="carousel-Item"></ng-content>
+    </div>
+    
+  </div>
+
+  <ng-content select="[carouselBtn]"></ng-content>
+
+</div>

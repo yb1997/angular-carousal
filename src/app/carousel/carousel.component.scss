@@ -1,0 +1,107 @@
+.carousel-container {
+  position: relative;
+  text-align: center;
+}
+
+.carousel {
+  display: inline-flex;
+  box-sizing: border-box;
+  transition: border-color 0.4s;
+  background-color: #ddd;
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+
+  .carousel-items-container {
+    position: relative;
+    transform: translate(0%);
+    transition: 0.7s;
+  }
+}
+
+.carousel-btn {
+  z-index: 10;
+  position: absolute;
+  top: calc(50% - 25px);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid #dfe1e5;
+  box-shadow: 0 7px 15px rgba(0,0,0,.2);
+  background-color: rgba(255,255,255,0.5);
+  outline: none;
+  padding: 0;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+
+.carousel.horiz {
+
+  .carousel-btn {
+    position: absolute;
+    height: 100%;
+    padding: 0 16px;
+  }
+  .carousel-btn.prev {
+    top: 0;
+    left: 0;
+  }
+  .carousel-btn.next {
+    top: 0;
+    right: 0;
+  }
+  .carousel-items-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+  }
+}
+
+.carousel.vert {
+
+  .carousel-btn {
+    position: absolute;
+    width: 100%;
+    padding: 16px 0;
+  }
+  .carousel-btn.prev {
+    top: 0;
+    left: 0;
+  }
+  .carousel-btn.next {
+    bottom: 0;
+    left: 0;
+  }
+  .carousel-items-container {
+    margin: auto;
+  }
+}
+
+
+// For Testing only, add to .carousel-item-container
+@keyframes slideHorizontally {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes slideVertically  {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-50%);
+  }
+}

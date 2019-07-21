@@ -1,0 +1,8 @@
+<div 
+  *ngIf="direction"
+  #contentContainer 
+  [ngClass]="direction" 
+  class="carousel-item-container"
+  >
+  <ng-content></ng-content>
+</div>
