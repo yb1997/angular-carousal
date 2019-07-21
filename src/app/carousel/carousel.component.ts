@@ -11,7 +11,9 @@ import { isIE } from "./ie-detect";
 export type Direction = "horiz" | "vert";
 export type Dimension = "width" | "height";
 
-
+// TO-DO:
+// Slide according to current width
+// Fix buttons not rendering due to async loading of images 
 @Component({
   selector: "app-carousel",
   templateUrl: "./carousel.component.html",
